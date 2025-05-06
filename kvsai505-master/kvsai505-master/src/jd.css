@@ -1,0 +1,89 @@
+body {
+  background-image: url('../public/rail501.jpg'); /* Static railway background */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  margin: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.home-container {
+  padding: 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.centered-image {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  border: 4px solid;
+  border-image: linear-gradient(45deg, #ff6ec4, #7873f5, #4ade80, #facc15) 1;
+}
+
+.career-objective {
+  font-size: 18px;
+  color: black;
+  line-height: 1.6;
+  margin-top: 20px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-border {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.animated-border::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5, #4ADEDE, #ff6ec4);
+  background-size: 400% 400%;
+  animation: borderAnimation 8s linear infinite;
+  border-radius: 12px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+@keyframes borderAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
